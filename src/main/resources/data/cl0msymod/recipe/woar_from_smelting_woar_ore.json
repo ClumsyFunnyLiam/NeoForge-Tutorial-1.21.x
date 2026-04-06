@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 4.3,
+  "group": "woar",
+  "ingredient": {
+    "item": "cl0msymod:woar_ore"
+  },
+  "result": {
+    "id": "cl0msymod:woar"
+  }
+}

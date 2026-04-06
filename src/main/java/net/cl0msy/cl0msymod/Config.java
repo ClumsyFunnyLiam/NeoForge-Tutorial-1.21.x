@@ -1,4 +1,4 @@
-package net.cl0msy.tutorialmod;
+package net.cl0msy.cl0msymod;
 
 import java.util.List;
 
