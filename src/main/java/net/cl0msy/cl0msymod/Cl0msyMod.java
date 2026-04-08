@@ -11,6 +11,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -45,9 +46,6 @@ public class Cl0msyMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ProjectECompat.init(modEventBus);
-
-
 
         ModDataComponents.register(modEventBus);
         ClientModEvents.register(modEventBus);
@@ -58,10 +56,23 @@ public class Cl0msyMod {
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        net.neoforged.fml.ModList.get().getModContainerById("projecte").ifPresent(peContainer -> {
+                    var modInfo = peContainer.getModInfo();
+                    var modFile = modInfo.getOwningFile().getFile();
+            ProjectECompat.registerEMCValues(modFile);
+                    // This will print the actual path of the ProjectE jar to your console
+                    System.out.println("[Cl0msyMod] Found ProjectE file at: " + modFile.getFilePath());
+                    System.out.println("[Cl0msyMod] ProjectE Version: " + modInfo.getVersion());
+                });
+
+
+        modEventBus.addListener(this::commonSetup);
     }
 
 
-    private void commonSetup(FMLCommonSetupEvent event) { }
+    private void commonSetup(FMLCommonSetupEvent event) {
+    }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {

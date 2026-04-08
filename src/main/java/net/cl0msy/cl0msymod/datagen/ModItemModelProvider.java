@@ -69,7 +69,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.PYR_FENCE, ModBlocks.PYR_BLOCK);
         wallItem(ModBlocks.PYR_WALL, ModBlocks.PYR_BLOCK);
 
-//        basicItem(ModBlocks.PYR_DOOR.asItem());
+        basicItem(ModBlocks.PYR_DOOR.asItem());
 
 //        handheldItem(ModItems.WOAR_SWORD);
 //        handheldItem(ModItems.WOAR_PICKAXE);

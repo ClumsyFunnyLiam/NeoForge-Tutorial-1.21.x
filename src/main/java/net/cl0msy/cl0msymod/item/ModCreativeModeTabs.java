@@ -51,11 +51,28 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Cl0msyMod.MODID, "cl0msy_items_tab"))
                     .title(Component.translatable("creativetab.cl0msymod.cl0msy_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        // Ores
                         output.accept(ModBlocks.WOAR_ORE.get());
                         output.accept(ModBlocks.WOAR_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.PYR_ORE.get());
+                        output.accept(ModBlocks.PYR_DEEPSLATE_ORE.get());
+
+                        // Woar
                         output.accept(ModBlocks.WOAR_BLOCK.get());
                         output.accept(ModBlocks.WOAR_STAIRS.get());
                         output.accept(ModBlocks.WOAR_SLAB.get());
+
+                        // Woar Non-Block Blocks
+                        output.accept(ModBlocks.WOAR_DOOR.get());
+                        output.accept(ModBlocks.WOAR_TRAPDOOR.get());
+                        output.accept(ModBlocks.WOAR_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.WOAR_BUTTON.get());
+                        output.accept(ModBlocks.WOAR_WALL.get());
+                        output.accept(ModBlocks.WOAR_FENCE.get());
+                        output.accept(ModBlocks.WOAR_FENCE_GATE.get());
+
+                        // Woar Bricks
                         output.accept(ModBlocks.WOAR_BRICKS.get());
                         output.accept(ModBlocks.WOAR_BRICK_STAIRS.get());
                         output.accept(ModBlocks.WOAR_BRICK_SLAB.get());
@@ -63,26 +80,32 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WOAR_BRICK_TILES.get());
                         output.accept(ModBlocks.POLISHED_WOAR_BRICKS.get());
 
-
-
-                        output.accept(ModBlocks.WOAR_DOOR.get());
-                        output.accept(ModBlocks.WOAR_TRAPDOOR.get());
-                        output.accept(ModBlocks.WOAR_PRESSURE_PLATE.get());
-                        output.accept(ModBlocks.WOAR_LAMP.get());
-                        output.accept(ModBlocks.WOAR_BUTTON.get());
-                        output.accept(ModBlocks.WOAR_WALL.get());
-                        output.accept(ModBlocks.WOAR_FENCE.get());
-                        output.accept(ModBlocks.WOAR_FENCE_GATE.get());
-
-                        output.accept(ModBlocks.PYR_ORE.get());
-                        output.accept(ModBlocks.PYR_DEEPSLATE_ORE.get());
+                        // Pyr
                         output.accept(ModBlocks.PYR_BLOCK.get());
+                        output.accept(ModBlocks.PYR_STAIRS.get());
+                        output.accept(ModBlocks.PYR_SLAB.get());
+
+
+                        // Pyr Non-Block Blocks
+                        output.accept(ModBlocks.PYR_DOOR.get());
+                        output.accept(ModBlocks.PYR_TRAPDOOR.get());
+                        output.accept(ModBlocks.PYR_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.PYR_BUTTON.get());
+                        output.accept(ModBlocks.PYR_WALL.get());
+                        output.accept(ModBlocks.PYR_FENCE.get());
+                        output.accept(ModBlocks.PYR_FENCE_GATE.get());
+
+                        // Pyr Bricks
                         output.accept(ModBlocks.PYR_BRICKS.get());
+                        output.accept(ModBlocks.PYR_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.PYR_BRICK_SLAB.get());
+
+                        output.accept(ModBlocks.POLISHED_PYR_BRICKS.get());
                         output.accept(ModBlocks.PYR_BRICK_PILLAR.get());
                         output.accept(ModBlocks.PYR_BRICK_TILES.get());
-                        output.accept(ModBlocks.POLISHED_PYR_BRICKS.get());
 
 
+                        // Extra
                         output.accept(ModBlocks.WOAR_SLATE.get());
                         output.accept(ModBlocks.SLATE.get());
                         output.accept(ModBlocks.SCORIA.get());

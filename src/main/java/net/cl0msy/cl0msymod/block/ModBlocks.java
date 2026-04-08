@@ -266,14 +266,14 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.COW_BELL)
                     .mapColor(MapColor.GRASS)
             ));
-//    public static final DeferredBlock<TrapDoorBlock> PYR_TRAPDOOR = registerBlock("pyr_trapdoor",
-//            () -> new TrapDoorBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.of()
-//                    .strength(1.5f, 8f).requiresCorrectToolForDrops()
-//                    .sound(SoundType.NETHERITE_BLOCK)
-//                    .instrument(NoteBlockInstrument.COW_BELL)
-//                    .mapColor(MapColor.GRASS)
-//
-//            ));
+    public static final DeferredBlock<TrapDoorBlock> PYR_TRAPDOOR = registerBlock("pyr_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.of()
+                    .strength(1.5f, 8f).requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)
+                    .instrument(NoteBlockInstrument.COW_BELL)
+                    .mapColor(MapColor.GRASS)
+
+            ));
     public static final DeferredBlock<WallBlock> PYR_WALL = registerBlock("pyr_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of()
                     .strength(1.5f, 8f).requiresCorrectToolForDrops()
@@ -281,15 +281,15 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.COW_BELL)
                     .mapColor(MapColor.GRASS)
             ));
-//    public static final DeferredBlock<DoorBlock> PYR_DOOR = registerBlock("pyr_door",
-//            () -> new DoorBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.of()
-//                    .strength(1.5f, 8f).requiresCorrectToolForDrops()
-//                    .sound(SoundType.NETHERITE_BLOCK)
-//                    .instrument(NoteBlockInstrument.COW_BELL)
-//                    .mapColor(MapColor.GRASS);
+    public static final DeferredBlock<DoorBlock> PYR_DOOR = registerBlock("pyr_door",
+            () -> new DoorBlock(BlockSetType.DARK_OAK, BlockBehaviour.Properties.of()
+                    .strength(1.5f, 8f).requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)
+                    .instrument(NoteBlockInstrument.COW_BELL)
+                    .mapColor(MapColor.GRASS)
+            ));
 
 
-    // creates and registers the block, and the block item. so does everything together
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

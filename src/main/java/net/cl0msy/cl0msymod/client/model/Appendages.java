@@ -55,11 +55,11 @@ public class Appendages<T extends LivingEntity> extends EntityModel<T> {
 		// ================= LEFT BREAST =================
 		PartDefinition lb = body.addOrReplaceChild("left_breast",
 				CubeListBuilder.create()
-						.texOffs(23, 17)
+						.texOffs(25, 24)
 						.addBox(-1.75F, -2.0F, -2.5F, 3.75F, 3.9F, 3.6F)
 
 						// bottom face (HAS THICKNESS)
-						.texOffs(20, 28)
+						.texOffs(23, 28)
 						.addBox(-1.75F, 1.95F, -2.5F, 3.75F, 0.02F, 3.6F),
 				PartPose.ZERO
 		);
@@ -85,7 +85,7 @@ public class Appendages<T extends LivingEntity> extends EntityModel<T> {
 				PartPose.ZERO
 		);
 
-		// ================= RIGHT BREAST (NOW MATCHES LEFT) =================
+		// ================= RIGHT BREAST =================
 		PartDefinition rb = body.addOrReplaceChild("right_breast",
 				CubeListBuilder.create()
 						// SAME VALUES AS LEFT (IMPORTANT)
@@ -145,7 +145,7 @@ public class Appendages<T extends LivingEntity> extends EntityModel<T> {
 		this.rightLeg.xRot = Mth.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 		this.leftLeg.xRot = Mth.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
 
-		// --- YOUR ORIGINAL CROUCHING LOGIC ---
+
 		boolean isCrouching = entity.isCrouching();
 		float crouchYOffset = isCrouching ? 4.2F : 0F;
 		float crouchZOffset = isCrouching ? 3.5F : 0F;
@@ -224,10 +224,10 @@ public class Appendages<T extends LivingEntity> extends EntityModel<T> {
 		this.rBreast.yScale = scaleY;
 		this.rBreast.zScale = scaleZ;
 
-		// YOUR ORIGINAL CROUCH ADJUSTMENTS
+
 		if (isCrouching) {
 			this.lBreast.x -= mass * 0.3f;
-			this.lBreast.y -= 1.5f + verticalVelocity;
+			this.lBreast.y -= 1.5f;
 			this.lBreast.z -= 3;
 			this.lBreast.xRot -= .2f;
 			this.lBreast.yRot = lerp((size - .5f) / 1.5f, this.lBreast.yRot, 0.2f);
@@ -262,14 +262,13 @@ public class Appendages<T extends LivingEntity> extends EntityModel<T> {
 			this.lHand.xRot = 0;
 		}
 
-		// LAG-FREE OUTER LAYER SYNC
+		// OUTER LAYER SYNC
 		this.lBreast_outer.x = 0; this.lBreast_outer.y = 0; this.lBreast_outer.z = 0;
 		this.rBreast_outer.x = 0; this.rBreast_outer.y = 0; this.rBreast_outer.z = 0;
 
 		this.lBreast_outer.xRot = 0; this.lBreast_outer.yRot = 0; this.lBreast_outer.zRot = 0;
 		this.rBreast_outer.xRot = 0; this.rBreast_outer.yRot = 0; this.rBreast_outer.zRot = 0;
 
-// Scales should still match to maintain the shape
 		this.lBreast_outer.setPos(0, 0.05f, 0);
 		this.rBreast_outer.setPos(0, 0.05f, 0);
 

@@ -24,7 +24,7 @@ public class AppendagesLayer<T extends AbstractClientPlayer, M extends PlayerMod
 
     public AppendagesLayer(RenderLayerParent<T, M> parent, EntityModelSet modelSet) {
         super(parent);
-        // This is where you were pausing. It is NULL here because it's currently being created!
+
         this.appendagesModel = new Appendages<>(modelSet.bakeLayer(Appendages.LAYER_LOCATION));
     }
 
@@ -32,17 +32,15 @@ public class AppendagesLayer<T extends AbstractClientPlayer, M extends PlayerMod
     public void render(PoseStack poseStack, MultiBufferSource buffer, int packedLight, T player, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         if (player.isInvisible()) return;
 
-        // 1. UPDATE MODEL STATE
-        // Move copyProperties here to ensure the parent model is actually ready
         this.getParentModel().copyPropertiesTo(this.appendagesModel);
 
         boolean hasChestplate = !player.getItemBySlot(EquipmentSlot.CHEST).isEmpty();
         this.appendagesModel.armorPush = hasChestplate ? 1.25f : 0.0f;
 
-        // Run your restored math from Appendages.java
+
         this.appendagesModel.setupAnim(player, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
 
-        // 2. SET VISIBILITY (Only show outer layers if the player has them enabled in settings)
+
         boolean showJacket = player.isModelPartShown(PlayerModelPart.JACKET);
         this.appendagesModel.lBreast_outer.visible = showJacket && !hasChestplate;
         this.appendagesModel.rBreast_outer.visible = showJacket && !hasChestplate;
@@ -52,12 +50,12 @@ public class AppendagesLayer<T extends AbstractClientPlayer, M extends PlayerMod
         this.appendagesModel.lToes_outer.visible = player.isModelPartShown(PlayerModelPart.LEFT_PANTS_LEG);
         this.appendagesModel.rToes_outer.visible = player.isModelPartShown(PlayerModelPart.RIGHT_PANTS_LEG);
 
-        // 3. RENDER SKIN
+        // RENDER SKIN
         ResourceLocation skinTexture = player.getSkin().texture();
         VertexConsumer skinConsumer = buffer.getBuffer(RenderType.entityCutoutNoCull(skinTexture));
         this.appendagesModel.renderToBuffer(poseStack, skinConsumer, packedLight, LivingEntityRenderer.getOverlayCoords(player, 0.0F), 0xFFFFFFFF);
 
-        // 4. RENDER ARMOR (Chest and Feet)
+        // RENDER ARMOR (Chest and Feet)
         renderArmorSlot(poseStack, buffer, player, EquipmentSlot.CHEST, packedLight);
         renderArmorSlot(poseStack, buffer, player, EquipmentSlot.FEET, packedLight);
     }
@@ -82,7 +80,7 @@ public class AppendagesLayer<T extends AbstractClientPlayer, M extends PlayerMod
         ArmorMaterial material = item.getMaterial().value();
         int layer = (slot == EquipmentSlot.LEGS) ? 2 : 1;
 
-        // This is the modern way to get the texture location to prevent resource-not-found errors
+
         ResourceLocation baseLoc = material.layers().get(0).texture(false);
         return ResourceLocation.fromNamespaceAndPath(baseLoc.getNamespace(), baseLoc.getPath());
     }

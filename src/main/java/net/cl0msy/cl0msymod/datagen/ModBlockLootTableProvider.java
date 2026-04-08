@@ -84,9 +84,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PYR_FENCE.get());
         dropSelf(ModBlocks.PYR_FENCE_GATE.get());
         dropSelf(ModBlocks.PYR_WALL.get());
-//      add(ModBlocks.PYR_DOOR.get(),
-//                block -> createDoorTable(ModBlocks.PYR_DOOR.get()));
-//        dropSelf(ModBlocks.PYR_TRAPDOOR.get());
+        add(ModBlocks.PYR_DOOR.get(),
+                block -> createDoorTable(ModBlocks.PYR_DOOR.get()));
+        dropSelf(ModBlocks.PYR_TRAPDOOR.get());
 
         dropSelf(ModBlocks.SLATE.get());
         dropSelf(ModBlocks.WOAR_SLATE.get());

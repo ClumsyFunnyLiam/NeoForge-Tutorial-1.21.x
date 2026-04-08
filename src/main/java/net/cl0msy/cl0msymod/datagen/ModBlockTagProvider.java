@@ -53,10 +53,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_DIAMOND_TOOL);
 
 
-        tag(BlockTags.FENCES).add(ModBlocks.WOAR_FENCE.get());
-        tag(BlockTags.FENCE_GATES).add(ModBlocks.WOAR_FENCE_GATE.get());
-        tag(BlockTags.WALLS).add(ModBlocks.WOAR_WALL.get());
-        tag(BlockTags.WALL_POST_OVERRIDE).add(ModBlocks.WOAR_WALL.get());
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.WOAR_FENCE.get())
+                .add(ModBlocks.PYR_FENCE.get());
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.WOAR_FENCE_GATE.get())
+                .add(ModBlocks.PYR_FENCE_GATE.get());
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.WOAR_WALL.get())
+                .add(ModBlocks.PYR_WALL.get());
+        tag(BlockTags.WALL_POST_OVERRIDE)
+                .add(ModBlocks.WOAR_WALL.get())
+                .add(ModBlocks.PYR_WALL.get());
 
         tag(ModTags.Blocks.NEEDS_WOAR_TOOL)
                 .add(ModBlocks.WOAR_LAMP.get())

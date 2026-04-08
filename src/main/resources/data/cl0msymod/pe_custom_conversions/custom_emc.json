@@ -1,0 +1,18 @@
+{
+  "comment": "Custom EMC for Cl0msyMod",
+  "groups": {
+    "cl0msy_items": {
+      "comment": "Registering base materials and ores",
+      "values": {
+        "cl0msymod:woar": 32,
+        "cl0msymod:woar_raw": 32,
+        "cl0msymod:woar_ore": 32,
+        "cl0msymod:woar_deepslate_ore": 32,
+        "cl0msymod:pyr": 32,
+        "cl0msymod:pyr_raw": 32,
+        "cl0msymod:pyr_ore": 32,
+        "cl0msymod:pyr_deepslate_ore": 32
+      }
+    }
+  }
+}

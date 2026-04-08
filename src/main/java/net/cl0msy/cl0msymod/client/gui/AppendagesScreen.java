@@ -33,8 +33,8 @@ public class AppendagesScreen extends Screen {
             btn.setMessage(Component.literal("Chest: " + (ModSettings.showChest ? "ON" : "OFF")));
         }).bounds(x, y + 50, 200, 20).build());
 
-        // --- FIXED SLIDERS (Using Anonymous Classes) ---
-        // Chest Size Slider
+        // --- SLIDERS  ---
+
         this.addRenderableWidget(new ExtendedSlider(x, y + 80, 200, 20,
                 Component.literal("Chest Volume: "), Component.empty(),
                 0.5D, 2.0D, (double)ModSettings.chestSize, 0.05D, 1, true) { // 0.05 step for precision

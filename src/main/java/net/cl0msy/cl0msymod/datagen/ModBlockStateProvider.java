@@ -53,9 +53,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(ModBlocks.PYR_STAIRS.get(), blockTexture(ModBlocks.PYR_BLOCK.get()));
         slabBlock(ModBlocks.PYR_SLAB.get(), ModBlocks.PYR_BLOCK.getId(), blockTexture(ModBlocks.PYR_BLOCK.get()));
 
+
+        stairsBlock(ModBlocks.WOAR_BRICK_STAIRS.get(), blockTexture(ModBlocks.WOAR_BRICKS.get()));
+        slabBlock(ModBlocks.WOAR_BRICK_SLAB.get(), ModBlocks.WOAR_BRICKS.getId(), blockTexture(ModBlocks.WOAR_BRICKS.get()));
+
         stairsBlock(ModBlocks.PYR_BRICK_STAIRS.get(), blockTexture(ModBlocks.PYR_BRICKS.get()));
         slabBlock(ModBlocks.PYR_BRICK_SLAB.get(), ModBlocks.PYR_BRICKS.getId(), blockTexture(ModBlocks.PYR_BRICKS.get()));
 
+        // woar
         buttonBlock(ModBlocks.WOAR_BUTTON.get(), blockTexture(ModBlocks.WOAR_BLOCK.get()));
         pressurePlateBlock(ModBlocks.WOAR_PRESSURE_PLATE.get(), blockTexture(ModBlocks.WOAR_BLOCK.get()));
 
@@ -66,8 +71,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(ModBlocks.WOAR_TRAPDOOR.get(), blockTexture(ModBlocks.WOAR_TRAPDOOR.get()), true, "cutout");
         doorBlockWithRenderType(ModBlocks.WOAR_DOOR.get(), modLoc("block/woar_door_bottom"), modLoc("block/woar_door_top"), "cutout");
 
-        stairsBlock(ModBlocks.WOAR_BRICK_STAIRS.get(), blockTexture(ModBlocks.WOAR_BRICKS.get()));
-        slabBlock(ModBlocks.WOAR_BRICK_SLAB.get(), ModBlocks.WOAR_BRICKS.getId(), blockTexture(ModBlocks.WOAR_BRICKS.get()));
+        // pyr
+        buttonBlock(ModBlocks.PYR_BUTTON.get(), blockTexture(ModBlocks.PYR_BLOCK.get()));
+        pressurePlateBlock(ModBlocks.PYR_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PYR_BLOCK.get()));
+
+        fenceBlock(ModBlocks.PYR_FENCE.get(), blockTexture(ModBlocks.PYR_BLOCK.get()));
+        fenceGateBlock(ModBlocks.PYR_FENCE_GATE.get(), blockTexture(ModBlocks.PYR_BLOCK.get()));
+        wallBlock(ModBlocks.PYR_WALL.get(), blockTexture(ModBlocks.PYR_BLOCK.get()));
+
+        trapdoorBlockWithRenderType(ModBlocks.PYR_TRAPDOOR.get(), blockTexture(ModBlocks.PYR_TRAPDOOR.get()), true, "cutout");
+        doorBlockWithRenderType(ModBlocks.PYR_DOOR.get(), modLoc("block/pyr_door_bottom"), modLoc("block/pyr_door_top"), "cutout");
+
+
+        blockItem(ModBlocks.WOAR_STAIRS);
+        blockItem(ModBlocks.WOAR_SLAB);
+        blockItem(ModBlocks.WOAR_BRICK_PILLAR);
+        blockItem(ModBlocks.WOAR_BRICK_TILES);
+        blockItem(ModBlocks.WOAR_BRICK_STAIRS);
+        blockItem(ModBlocks.WOAR_BRICK_SLAB);
+        blockItem(ModBlocks.WOAR_FENCE_GATE);
+        blockItem(ModBlocks.WOAR_PRESSURE_PLATE);
+        blockItem(ModBlocks.WOAR_TRAPDOOR, "_bottom");
+
+
+        blockItem(ModBlocks.PYR_STAIRS);
+        blockItem(ModBlocks.PYR_SLAB);
+        blockItem(ModBlocks.PYR_BRICK_PILLAR);
+        blockItem(ModBlocks.PYR_BRICK_TILES);
+        blockItem(ModBlocks.PYR_BRICK_STAIRS);
+        blockItem(ModBlocks.PYR_BRICK_SLAB);
+        blockItem(ModBlocks.PYR_BRICK_SLAB);
+        blockItem(ModBlocks.PYR_FENCE_GATE);
+        blockItem(ModBlocks.PYR_PRESSURE_PLATE);
+        blockItem(ModBlocks.PYR_TRAPDOOR, "_bottom");
 
         customLamp();
     }
@@ -95,7 +131,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("cl0msymod:block/" + deferredBlock.getId().getPath()));
     }
 
-    private void blockItem2(DeferredBlock<?> deferredBlock, String appendix) {
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("cl0msymod:block/" + deferredBlock.getId().getPath() + appendix));
     }
 }
