@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "item": "cl0msymod:woar",
+      "emc": 32
+    },
+    {
+      "item": "cl0msymod:woar_raw",
+      "emc": 32
+    },
+    {
+      "item": "cl0msymod:woar_ore",
+      "emc": 32
+    },
+    {
+      "item": "cl0msymod:woar_deepslate_ore",
+      "emc": 32
+    },
+    {
+      "item": "cl0msymod:pyr",
+      "emc": 112
+    },
+    {
+      "item": "cl0msymod:pyr_raw",
+      "emc": 112
+    },
+    {
+      "item": "cl0msymod:pyr_ore",
+      "emc": 112
+    },
+    {
+      "item": "cl0msymod:pyr_deepslate_ore",
+      "emc": 112
+    }
+  ]
+}

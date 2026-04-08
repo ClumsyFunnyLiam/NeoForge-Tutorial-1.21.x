@@ -18,7 +18,8 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final Holder<ArmorMaterial> WOAR_ARMOR_MATERIAL = register("woar", Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+    public static final Holder<ArmorMaterial> WOAR_ARMOR_MATERIAL = register("woar",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
         attribute.put(ArmorItem.Type.HELMET, 1);
         attribute.put(ArmorItem.Type.CHESTPLATE, 5);
         attribute.put(ArmorItem.Type.LEGGINGS, 3);

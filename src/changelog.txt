@@ -10,3 +10,28 @@ v0.0.3
 
 v0.0.4 - the mark update
 - implemented limbs and shit(fingers, toes)
+
+v0.0.5 - v0.1.0
+- fixes bugs
+- adds more features for Woar (still cant craft tools, and the tools, and some the blocks textures are just iron)
+
+v0.1.1 - v0.1.2
+- textured every placeholder
+- balanced tools
+- added missing names into the en_us file.
+- added woar bricks
+
+v0.1.3 - v0.1.4
+- added armor recipes
+- added compact with projectE
+- added compact with JEI
+- removed leftover pixels on sword texture
+
+v0.1.4.1
+- updated woar block texture
+
+v0.2.0.0 (WIP)
+- woars and wonders
+- pyr
+- biome specific ore spawning
+- plans for future updates with pyr being a final upgrade for tools and woar being a final upgrade to armor

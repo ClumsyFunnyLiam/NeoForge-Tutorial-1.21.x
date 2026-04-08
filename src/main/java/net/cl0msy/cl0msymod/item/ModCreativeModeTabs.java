@@ -21,17 +21,75 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.WOAR.get()))
                     .title(Component.translatable("creativetab.cl0msymod.cl0msy_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.WOAR);
-                        output.accept(ModItems.WOAR_RAW);
+                        output.accept(ModItems.WOAR.get());
+                        output.accept(ModItems.WOAR_RAW.get());
+
+                        output.accept(ModItems.WOAR_HAMMER.get());
+
+                        output.accept(ModItems.WOAR_SWORD.get());
+                        output.accept(ModItems.WOAR_AXE.get());
+                        output.accept(ModItems.WOAR_PICKAXE.get());
+                        output.accept(ModItems.WOAR_SHOVEL.get());
+                        output.accept(ModItems.WOAR_HOE.get());
+
+
+                        output.accept(ModItems.WOAR_HELMET.get());
+                        output.accept(ModItems.WOAR_CHESTPLATE.get());
+                        output.accept(ModItems.WOAR_LEGGINGS.get());
+                        output.accept(ModItems.WOAR_BOOTS.get());
+
+
+                        output.accept(ModItems.PYR.get());
+                        output.accept(ModItems.PYR_RAW.get());
+
+
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> CUSTOM_BLOCK_TAB = CREATIVE_MODE_TAB.register("cl0msy_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.WOAR_BLOCK))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(Cl0msyMod.MODID, "cl0msy_items_tab"))
-                    .title(Component.translatable("creativetab.cl0msymod.modblocks"))
+                    .title(Component.translatable("creativetab.cl0msymod.cl0msy_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.WOAR_BLOCK);
-                        output.accept(ModBlocks.WOAR_ORE);
+                        output.accept(ModBlocks.WOAR_ORE.get());
+                        output.accept(ModBlocks.WOAR_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.WOAR_BLOCK.get());
+                        output.accept(ModBlocks.WOAR_STAIRS.get());
+                        output.accept(ModBlocks.WOAR_SLAB.get());
+                        output.accept(ModBlocks.WOAR_BRICKS.get());
+                        output.accept(ModBlocks.WOAR_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.WOAR_BRICK_SLAB.get());
+                        output.accept(ModBlocks.WOAR_BRICK_PILLAR.get());
+                        output.accept(ModBlocks.WOAR_BRICK_TILES.get());
+                        output.accept(ModBlocks.POLISHED_WOAR_BRICKS.get());
+
+
+
+                        output.accept(ModBlocks.WOAR_DOOR.get());
+                        output.accept(ModBlocks.WOAR_TRAPDOOR.get());
+                        output.accept(ModBlocks.WOAR_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.WOAR_LAMP.get());
+                        output.accept(ModBlocks.WOAR_BUTTON.get());
+                        output.accept(ModBlocks.WOAR_WALL.get());
+                        output.accept(ModBlocks.WOAR_FENCE.get());
+                        output.accept(ModBlocks.WOAR_FENCE_GATE.get());
+
+                        output.accept(ModBlocks.PYR_ORE.get());
+                        output.accept(ModBlocks.PYR_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.PYR_BLOCK.get());
+                        output.accept(ModBlocks.PYR_BRICKS.get());
+                        output.accept(ModBlocks.PYR_BRICK_PILLAR.get());
+                        output.accept(ModBlocks.PYR_BRICK_TILES.get());
+                        output.accept(ModBlocks.POLISHED_PYR_BRICKS.get());
+
+
+                        output.accept(ModBlocks.WOAR_SLATE.get());
+                        output.accept(ModBlocks.SLATE.get());
+                        output.accept(ModBlocks.SCORIA.get());
+
+
+
+
 
                     }).build());
 

@@ -2,9 +2,95 @@
   "creativetab.cl0msymod.cl0msy_items": "cl0msy's Mod Items",
   "creativetab.cl0msymod.cl0msy_blocks": "cl0msy's Mod Blocks",
 
+
+
   "item.cl0msymod.woar": "Woar",
   "item.cl0msymod.woar_raw": "Raw Woar",
+  "item.cl0msymod.woar_door": "Woar Door",
+  "block.cl0msymod.woar_door": "Woar Door",
+
+
+  "item.cl0msymod.woar_helmet": "Woar Helmet",
+  "item.cl0msymod.woar_chestplate": "Woar Chestplate",
+  "item.cl0msymod.woar_leggings": "Woar Leggings",
+  "item.cl0msymod.woar_boots": "Woar Boots",
+
+  "item.cl0msymod.woar_sword": "Woar Sword",
+  "item.cl0msymod.woar_pickaxe": "Woar Pickaxe",
+  "item.cl0msymod.woar_shovel": "Woar Shovel",
+  "item.cl0msymod.woar_axe": "Woar Axe",
+  "item.cl0msymod.woar_hammer": "Woar Hammer",
+  "item.cl0msymod.woar_hoe": "Woar Hoe",
+
+  "item.cl0msymod.pyr": "Pyr",
+  "item.cl0msymod.pyr_raw": "Raw Pyr",
+  "item.cl0msymod.pyr_door": "Pyr Door",
+  "block.cl0msymod.pyr_door": "Pyr Door",
+
+
+  "item.cl0msymod.pyr_helmet": "Pyr Helmet",
+  "item.cl0msymod.pyr_chestplate": "Pyr Chestplate",
+  "item.cl0msymod.pyr_leggings": "Pyr Leggings",
+  "item.cl0msymod.pyr_boots": "Pyr Boots",
+
+  "item.cl0msymod.pyr_sword": "Pyr Sword",
+  "item.cl0msymod.pyr_pickaxe": "Pyr Pickaxe",
+  "item.cl0msymod.pyr_shovel": "Pyr Shovel",
+  "item.cl0msymod.pyr_axe": "Pyr Axe",
+  "item.cl0msymod.pyr_hammer": "Pyr Hammer",
+  "item.cl0msymod.pyr_hoe": "Pyr Hoe",
+
+
 
   "block.cl0msymod.woar_block": "Block of Woar",
-  "block.cl0msymod.woar_ore": "Woar Ore"
+  "block.cl0msymod.woar_slab": "Woar Slab",
+  "block.cl0msymod.woar_stairs": "Woar Stairs",
+
+  "block.cl0msymod.woar_bricks": "Woar Bricks",
+  "block.cl0msymod.polished_woar_bricks": "Polished Woar Bricks",
+  "block.cl0msymod.woar_brick_stairs": "Woar Brick Stairs",
+  "block.cl0msymod.woar_brick_slab": "Woar Brick Slab",
+
+  "block.cl0msymod.magic_block": "Magic bro idk",
+
+  "block.cl0msymod.woar_brick_pillar": "Woar Brick Pillar",
+  "block.cl0msymod.woar_brick_tiles": "Woar Brick Tiles",
+  "block.cl0msymod.pyr_brick_pillar": "Pyr Brick Pillar",
+  "block.cl0msymod.pyr_brick_tiles": "Pyr Brick Tiles",
+
+
+  "block.cl0msymod.woar_ore": "Woar Ore",
+  "block.cl0msymod.woar_deepslate_ore": "Deepslate Woar Ore",
+
+  "block.cl0msymod.woar_lamp": "Woar Lamp",
+  "block.cl0msymod.woar_trapdoor": "Woar Trapdoor",
+  "block.cl0msymod.woar_wall": "Woar Wall",
+  "block.cl0msymod.woar_fence": "Woar Fence",
+  "block.cl0msymod.woar_fence_gate": "Woar Fence Gate",
+  "block.cl0msymod.woar_button": "Woar Button",
+  "block.cl0msymod.woar_pressure_plate": "Woar Pressure plate",
+
+  "block.cl0msymod.pyr_block": "Block of Pyr",
+  "block.cl0msymod.pyr_slab": "Pyr Slab",
+  "block.cl0msymod.pyr_stairs": "Pyr Stairs",
+  "block.cl0msymod.polished_pyr_bricks": "Polished Pyr Bricks",
+  "block.cl0msymod.polished_pyr_pillar": "Polished Pyr Pillar",
+
+  "block.cl0msymod.pyr_bricks": "Pyr Bricks",
+  "block.cl0msymod.pyr_brick_stairs": "Pyr Bricks Stairs",
+  "block.cl0msymod.pyr_brick_slab": "Pyr Bricks Slab",
+
+  "block.cl0msymod.slate": "Slate",
+  "block.cl0msymod.woar_slate": "Woar Slate",
+  "block.cl0msymod.scoria": "Scoria",
+
+  "block.cl0msymod.pyr_ore": "Pyr Ore",
+  "block.cl0msymod.pyr_deepslate_ore": "Deepslate Pyr Ore",
+
+  "block.cl0msymod.pyr_trapdoor": "Pyr Trapdoor",
+  "block.cl0msymod.pyr_wall": "Pyr Wall",
+  "block.cl0msymod.pyr_fence": "Pyr Fence",
+  "block.cl0msymod.pyr_fence_gate": "Pyr Fence Gate",
+  "block.cl0msymod.pyr_button": "Pyr Button",
+  "block.cl0msymod.pyr_pressure_plate": "Pyr Pressure plate"
 }
